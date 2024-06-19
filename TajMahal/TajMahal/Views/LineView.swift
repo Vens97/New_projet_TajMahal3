@@ -2,17 +2,32 @@
 //  LineView.swift
 //  TajMahal
 //
-//  Created by Altieri on 19/06/2024.
+//  Created by Altieri on 27/05/2024.
 //
 
 import SwiftUI
 
 struct LineView: View {
+    
+    let systemName: String
+    let onetext: String
+    let twotext: String
+    let troistext: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: systemName)
+                .foregroundColor(.black)
+                .imageScale(.large)
+            Text(onetext)
+            Spacer()
+            Text(twotext)
+           
+        }
+        .padding()
     }
 }
 
 #Preview {
-    LineView()
+    LineView(systemName: "clock", onetext: "mardi", twotext: "ubgg", troistext: "phone")
 }
