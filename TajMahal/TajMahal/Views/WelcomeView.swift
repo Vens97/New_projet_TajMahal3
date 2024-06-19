@@ -1,5 +1,8 @@
 
 import SwiftUI
+extension Color {
+    static let bordeauxRed = Color(red: 0.8, green: 0.0, blue: 0.13)
+}
 
 struct WelcomeView: View {
     var body: some View {
@@ -16,11 +19,13 @@ struct WelcomeView: View {
                             .padding(.bottom, -40)
                             .foregroundColor(Color(.darkGray)) // Texte en gris foncé
                         
+                        Spacer()
+                        
                         Image("Logo")
                             .resizable()
                             .frame(width: 45, height: 40)
                             .colorMultiply(Color(.systemGray))
-                            .padding(.bottom, -70)
+                            .padding(.bottom, -60)
                             .padding(.horizontal, 13)
                     }
                     
@@ -66,7 +71,7 @@ struct WelcomeView: View {
                         .fontWeight(.bold)
                         .padding(.vertical, 8)
                         .padding(.horizontal, 90)
-                        .background(Color.red)
+                        .background(Color.bordeauxRed)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
