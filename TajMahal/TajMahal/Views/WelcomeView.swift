@@ -16,7 +16,7 @@ struct WelcomeView: View {
             NavigationLink {
                 MenuView()
             } label : {
-                Text("Menu")
+                Text("Menggffg")
             }
         }
     }
