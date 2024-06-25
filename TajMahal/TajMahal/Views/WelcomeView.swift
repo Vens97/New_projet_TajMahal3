@@ -81,7 +81,7 @@ struct WelcomeView: View {
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true) // Cacher le bouton de retour automatique
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // Utilisation du style de navigation stack pour éviter le bouton de retour par défaut
+        .navigationViewStyle(StackNavigationViewStyle()) 
     }
 }
 

@@ -13,11 +13,20 @@ struct DetailView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Image(dish.imageName)
-                .resizable()
-                .frame(width: 340, height: 400)
-                .cornerRadius(15)
-                .padding(.horizontal)
+            ZStack(alignment: .topTrailing) {
+                Image(dish.imageName)
+                    .resizable()
+                    .frame(width: 340, height: 400)
+                    .cornerRadius(15)
+                    .padding(.horizontal)
+                
+                spiceLevelText(for: dish.spiceLevel)
+                    .padding(11)
+                    .background(Color.white)
+                    .cornerRadius(25)
+                    .offset(x: -45, y: 20)
+                    .frame(width: 50, height: 50)
+            }
             
             Spacer().frame(height: 20)
             
@@ -26,9 +35,11 @@ struct DetailView: View {
                 .font(.headline)
                 .padding(.top, 10)
                 .padding(.vertical, 1)
+                .foregroundColor(Color(.darkGray))
             Text(dish.allergens)
                 .padding(.horizontal, 20)
                 .font(.subheadline)
+                .foregroundColor(Color(.darkGray))
             
             Rectangle()
                 .foregroundColor(.gray.opacity(0.3))
@@ -40,9 +51,11 @@ struct DetailView: View {
                 .padding(.horizontal, 20)
                 .font(.headline)
                 .padding(.vertical, 5)
+                .foregroundColor(Color(.darkGray))
             Text(dish.ingredients)
                 .font(.subheadline)
                 .padding(.horizontal, 20)
+                .foregroundColor(Color(.darkGray))
             
             Spacer()
         }
@@ -63,6 +76,60 @@ struct DetailView: View {
                 }
             }
         }
+    }
+
+    @ViewBuilder
+    private func spiceLevelText(for spiceLevel: SpiceLevel) -> some View {
+        HStack(spacing: 2) {
+            if spiceLevel == .hot {
+                Image("pimentrouge")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                Image("pimentrouge")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                Image("pimentrouge")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+            } else if spiceLevel == .medium {
+                Image("pimentrouge")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                Image("pimentrouge")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                Image("pimentclair")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .colorMultiply(Color.gray.opacity(0.6)) // Couleur grise plus claire
+            } else if spiceLevel == .light {
+                Image("pimentrouge")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                Image("pimentclair")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .colorMultiply(Color.gray.opacity(0.6))
+                Image("pimentclair")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .colorMultiply(Color.gray.opacity(0.6))
+            } else {
+                Image("pimentclair")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .colorMultiply(Color.gray.opacity(0.6))
+                Image("pimentclair")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .colorMultiply(Color.gray.opacity(0.6))
+                Image("pimentclair")
+                    .resizable()
+                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .colorMultiply(Color.gray.opacity(0.6))
+            }
+        }
+        .padding(.trailing, 15)
     }
 }
 

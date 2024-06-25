@@ -108,60 +108,57 @@ struct MenuRow: View {
 
     @ViewBuilder
     private func spiceLevelText(for spiceLevel: SpiceLevel) -> some View {
-        HStack(spacing: 2) {
+        HStack(spacing: 10) {
             if spiceLevel == .hot {
-                Image(systemName: "flame.fill")
+                Image("pimentrouge")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.red)
-                Image(systemName: "flame.fill")
+                Image("pimentrouge")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.red)
-                Image(systemName: "flame.fill")
+                Image("pimentrouge")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.red)
             } else if spiceLevel == .medium {
-                Image(systemName: "flame.fill")
+                Image("pimentrouge")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.red)
-                Image(systemName: "flame.fill")
+                Image("pimentrouge")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.red)
-                Image(systemName: "flame.fill")
+                Image("pimentclair")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.gray)
+                    .colorMultiply(Color.gray.opacity(0.6)) // Utilise une couleur grise plus claire
             } else if spiceLevel == .light {
-                Image(systemName: "flame.fill")
+                Image("pimentrouge")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.red)
-                Image(systemName: "flame.fill")
+                Image("pimentclair")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.gray)
-                Image(systemName: "flame.fill")
+                    .colorMultiply(Color.gray.opacity(0.6))
+                Image("pimentclair")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.gray)
+                    .colorMultiply(Color.gray.opacity(0.6))
             } else {
-                Image(systemName: "flame.fill")
+                Image("pimentclair")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.gray)
-                Image(systemName: "flame.fill")
+                    .colorMultiply(Color.gray.opacity(0.6))
+                Image("pimentclair")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.gray)
-                Image(systemName: "flame.fill")
+                    .colorMultiply(Color.gray.opacity(0.6))
+                Image("pimentclair")
                     .resizable()
                     .frame(width: 13, height: 13)
-                    .foregroundColor(.gray)
+                    .colorMultiply(Color.gray.opacity(0.6))
             }
         }
+        .padding(.trailing, 15)
     }
+
+
 }
