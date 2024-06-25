@@ -1,4 +1,3 @@
-//
 //  StartView.swift
 //  TajMahal
 //
@@ -8,7 +7,7 @@
 import SwiftUI
 
 struct StartView: View {
-    @State private var isActive: Bool = false
+    @State private var showWelcomeView: Bool = false // Variable d'état pour contrôler l'affichage de WelcomeView
     
     var body: some View {
         ZStack {
@@ -17,15 +16,11 @@ struct StartView: View {
             
             Image("Logo")
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        withAnimation {
-                            self.isActive = true
-                        }
-                    }
+                    self.showWelcomeView = true
                 }
-                .fullScreenCover(isPresented: $isActive, content: {
+                .fullScreenCover(isPresented: $showWelcomeView) {
                     WelcomeView()
-                })
+                }
         }
     }
 }
@@ -36,7 +31,7 @@ struct StartView_Previews: PreviewProvider {
     }
 }
 
-// Définition de CustomRed
+
 extension Color {
     static let CustomRed = Color(red: 0.8, green: 0.2, blue: 0.2)
 }

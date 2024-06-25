@@ -84,48 +84,48 @@ struct DetailView: View {
             if spiceLevel == .hot {
                 Image("pimentrouge")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                 Image("pimentrouge")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                 Image("pimentrouge")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
             } else if spiceLevel == .medium {
                 Image("pimentrouge")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                 Image("pimentrouge")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                 Image("pimentclair")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                     .colorMultiply(Color.gray.opacity(0.6)) // Couleur grise plus claire
             } else if spiceLevel == .light {
                 Image("pimentrouge")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                 Image("pimentclair")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                     .colorMultiply(Color.gray.opacity(0.6))
                 Image("pimentclair")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                     .colorMultiply(Color.gray.opacity(0.6))
             } else {
                 Image("pimentclair")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                     .colorMultiply(Color.gray.opacity(0.6))
                 Image("pimentclair")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                     .colorMultiply(Color.gray.opacity(0.6))
                 Image("pimentclair")
                     .resizable()
-                    .frame(width: 20, height: 20) // Taille des images de piment
+                    .frame(width: 15, height: 15) // Taille des images de piment
                     .colorMultiply(Color.gray.opacity(0.6))
             }
         }
