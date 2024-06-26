@@ -13,7 +13,7 @@ struct WelcomeView: View {
                 
                 VStack {
                     HStack {
-                        LineView(systemName: "", onetext: "Restaurant Indien", twotext: "", troistext: "bjbjb")
+                        LineView(systemName: "", onetext: "Restaurant Indien", twotext: "")
                             .font(.subheadline)
                             .padding(.horizontal, 0)
                             .padding(.bottom, -40)
@@ -29,35 +29,35 @@ struct WelcomeView: View {
                             .padding(.horizontal, 13)
                     }
                     
-                    LineView(systemName: "clock", onetext: "Taj Mahal", twotext: "", troistext: "")
+                    LineView(systemName: "clock", onetext: "Taj Mahal", twotext: "")
                         .fontWeight(.bold)
                         .padding(.horizontal, 0)
                     
-                    LineView(systemName: "clock", onetext: "Mardi", twotext: "11h30-14h30-18h30-22h30", troistext: "")
+                    LineView(systemName: "clock", onetext: "Mardi", twotext: "11h30-14h30-18h30-22h30")
                         .padding(.bottom, -25)
                         .padding(.horizontal, 10)
                         .font(.subheadline)
                         .foregroundColor(Color(.darkGray)) // Texte en gris foncé
                     
-                    LineView(systemName: "bag", onetext: "Type de service", twotext: "A emporter", troistext: "")
+                    LineView(systemName: "bag", onetext: "Type de service", twotext: "A emporter")
                         .padding(.bottom, -25)
                         .padding(.horizontal, 10)
                         .font(.subheadline)
                         .foregroundColor(Color(.darkGray)) // Texte en gris foncé
                     
-                    LineView(systemName: "mappin.and.ellipse", onetext: "12 avenue de la brique - 75010 Paris", twotext: "", troistext: "")
+                    LineView(systemName: "mappin.and.ellipse", onetext: "12 avenue de la brique - 75010 Paris", twotext: "")
                         .padding(.bottom, -25)
                         .padding(.horizontal, 10)
                         .font(.subheadline)
                         .foregroundColor(Color(.darkGray)) // Texte en gris foncé
                     
-                    LineView(systemName: "globe", onetext: "www.tajmahal.fr", twotext: "", troistext: "")
+                    LineView(systemName: "globe", onetext: "www.tajmahal.fr", twotext: "")
                         .padding(.bottom, -25)
                         .padding(.horizontal, 10)
                         .font(.subheadline)
                         .foregroundColor(Color(.darkGray)) // Texte en gris foncé
                     
-                    LineView(systemName: "phone", onetext: "06 12 24 56 78", twotext: "", troistext: "")
+                    LineView(systemName: "phone", onetext: "06 12 24 56 78", twotext: "")
                         .padding(.bottom, -5)
                         .padding(.horizontal, 10)
                         .font(.subheadline)
